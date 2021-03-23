@@ -13,7 +13,9 @@
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
   <link href="css/ruang-admin.min.css" rel="stylesheet">
   <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
-</head>
+  <!-- <link href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css"> -->
+  <link href="vendor/datatables/buttons.dataTables.min.css" rel="stylesheet" type="text/css">
+  </head>
 
 <body id="page-top">
   <div id="wrapper">
@@ -1362,12 +1364,34 @@
   <!-- Page level plugins -->
   <script src="vendor/datatables/jquery.dataTables.min.js"></script>
   <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+  <script src="vendor/datatables/dataTables.buttons.min.js"></script>
+  <script src="vendor/datatables/jszip.min.js"></script>
+  <script src="vendor/datatables/buttons.html5.min.js"></script>
 
+  
+ 
   <!-- Page level custom scripts -->
   <script>
     $(document).ready(function () {
-      $('#dataTable').DataTable(); // ID From dataTable 
-      $('#dataTableHover').DataTable(); // ID From dataTable with Hover
+      $('#dataTable').DataTable({
+        dom: 'Bfrtip',
+        buttons: [
+            {
+                extend: 'excelHtml5',
+                title: 'Data export'
+            },
+            {
+                extend: 'pdfHtml5',
+                title: 'Data export'
+            }
+        ]
+        
+      }); // ID From dataTable 
+      $('#dataTableHover').DataTable({
+        button:[
+          'excel'
+        ]
+      }); // ID From dataTable with Hover
     });
   </script>
 

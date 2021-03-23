@@ -68,15 +68,24 @@
       </li>
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTable" aria-expanded="true"
-          aria-controls="collapseTable">
+          aria-controls="collapseTable collapseTable1">
           <i class="fas fa-fw fa-table"></i>
           <span>Tables</span>
         </a>
+
         <div id="collapseTable" class="collapse" aria-labelledby="headingTable" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
+          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTable1" aria-expanded="flase"
+          aria-controls="collapseTable1">
+          <i class="fas fa-fw fa-table"></i>
+          <span>Tables</span>
+        </a> 
+        </div>
+
+        <div class="collapse"  id="collapseTable1"  data-parent="#accordionSidebar">
+          <div  class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Tables</h6>
-            <a class="collapse-item" href="simple-tables.html">Simple Tables</a>
-            <a class="collapse-item" href="datatables.html">DataTables</a>
+            <a class="collapse-item" href="simple-tables.html"><i class="fas fa-fw fa-table"></i>Simple Tables</a>
+            <a class="collapse-item" href="datatables.html"><i class="fas fa-fw fa-table"></i>DataTables</a>
           </div>
         </div>
       </li>
