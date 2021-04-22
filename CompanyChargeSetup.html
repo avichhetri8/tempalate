@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link href="img/logo/logo.png" rel="icon">
+  <title>RuangAdmin - Form Advanceds</title>
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <!-- Select2 -->
+  <link href="vendor/select2/dist/css/select2.min.css" rel="stylesheet" type="text/css">
+  <!-- Bootstrap DatePicker -->  
+  <link href="vendor/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet" >
+  <!-- Bootstrap Touchspin -->
+  <link href="vendor/bootstrap-touchspin/css/jquery.bootstrap-touchspin.css" rel="stylesheet" >
+  <!-- ClockPicker -->
+  <link href="vendor/clock-picker/clockpicker.css" rel="stylesheet">
+  <!-- RuangAdmin CSS -->
+  <link href="css/ruang-admin.min.css" rel="stylesheet">
+</head>
+<div class="container-fluid">
+    <div class="pd-ltr-20 xs-pd-20-10">
+        <div class="min-height-200px">
+            <div class="page-header">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12">
+                       
+                        <nav aria-label="breadcrumb" role="navigation">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item">Parameter Setup</li>
+                                <li class="breadcrumb-item active" aria-current="page">Company Setup</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <!-- Default Basic Forms Start -->
+            <div class="card mb-4">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary">Company Setup</h6>
+                </div>
+<hr class="my-1">
+<div class="card-body">
+    <div class="pd-20 card-box mb-30">
+        <div class="row">
+            <div class="col-4">
+                <input type="button" class="btn btn-success mr-2 mt-1 col-12 " value="Add" data-bind="click: chooseOptions.bind($data,'A')">
+            </div>
+            <div class="col-4 ">
+                <input type="button" class="btn btn-info mr-2 mt-1 col-12 " value="Update" data-bind="click: chooseOptions.bind($data,'U')">
+            </div>
+            <div class="col-4 ">
+                <input type="button" class="btn btn-danger mr-2 mt-1 col-12 " value="Delete" data-bind="click: chooseOptions.bind($data,'D')">
+            </div>
+        </div>
+        <br/>
+<div class="row">
+
+    <div class="form-group row col-md-7 col-sm-12">
+        <label class="col-sm-12 col-md-3 col-form-label" for="companySelect2">Company</label>
+        <div class="col-sm-12 col-md-11">
+            <select class="form-control form-control-sm" id="Company" data-bind='options: CompanyDetails,optionsText: "CompEnName",optionsValue:"CompCode",value:SelectedCompany, optionsCaption:"---Company---"'>
+            </select>
+        </div>
+    </div>
+   
+</div>
+<div class="row">
+
+    
+    <div class="form-group row col-xl-4 col-md-6 col-sm-12 col-12">
+        <label class="col-12 col-form-label">Charge Code: <span class="mandatory"> *</span></label>
+        <div class="col-sm-12 col-md-10">
+            <input class="form-control form-control-sm" data-bind="value: ChargeCode" type="text"  placeholder="Enter Charge Code">
+        </div>
+    </div>
+    <div class="form-group row col-xl-4 col-md-6 col-sm-12 col-12">
+        <label class="col-12 col-form-label">Charge Type: <span class="mandatory"> *</span></label>
+        <div class="col-sm-12 col-md-10">
+            <input class="form-control form-control-sm" data-bind="value: ChargeType" type="text" placeholder="Enter Charge Type">
+        </div>
+    </div>
+    <div class="form-group row col-xl-4 col-md-6 col-sm-12 col-12">
+        <label class="col-12 col-form-label">Charge: </label>
+        <div class="col-sm-12 col-md-10">
+            <input class="form-control form-control-sm" data-bind="value: Charge" type="text"  placeholder="Enter Charge">
+        </div>
+    </div>
+</div>
+
+<div class="col-12 p-3">
+    <table id="tbl_Charge" class="table  table-bordered">
+        <thead>
+            <tr>
+                <th>S.N</th>
+                <th>Comp Code</th>
+                <th>Charge Code</th>
+                <th>Description </th>
+                <th>Charge</th>
+            </tr>
+        </thead>
+        
+    </table>
+</div>
+
+
+
+<hr class="my-4 ">
+                                <div class="row col-12 p-4 justify-content-center ">
+                                    <div class="col-xl-2 col-md-3 col-sm-4 col-6 ">
+                                        <input type="button" class="btn btn-success mr-2 mt-1 col-12 " value="Save" data-bind="click: SaveCashDividend">
+                                    </div>
+                                    <div class="col-xl-2 col-md-3 col-sm-4 col-6 ">
+                                        <input type="button" class="btn btn-warning  mr-2 mt-1 col-12 " value="Clear">
+                                    </div>
+                                </div>
+</div>
+</div>
+</div></div>
+</div>
+</html>
