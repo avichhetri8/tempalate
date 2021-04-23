@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link href="img/logo/logo.png" rel="icon">
+  <title>RuangAdmin - Form Advanceds</title>
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <!-- Select2 -->
+  <link href="vendor/select2/dist/css/select2.min.css" rel="stylesheet" type="text/css">
+  <!-- Bootstrap DatePicker -->  
+  <link href="vendor/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet" >
+  <!-- Bootstrap Touchspin -->
+  <link href="vendor/bootstrap-touchspin/css/jquery.bootstrap-touchspin.css" rel="stylesheet" >
+  <!-- ClockPicker -->
+  <link href="vendor/clock-picker/clockpicker.css" rel="stylesheet">
+  <!-- RuangAdmin CSS -->
+  <link href="css/ruang-admin.min.css" rel="stylesheet">
+</head>
+<div class="container-fluid">
+    <div class="pd-ltr-20 xs-pd-20-10">
+        <div class="min-height-200px">
+            <div class="page-header">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12">
+                       
+                        <nav aria-label="breadcrumb" role="navigation">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item">Parameter Setup</li>
+                                <li class="breadcrumb-item active" aria-current="page">Broker Setup</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <!-- Default Basic Forms Start -->
+            <div class="card mb-4">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary">Company Setup</h6>
+                </div>
+<hr class="my-1">
+<div class="card-body">
+    <div class="pd-20 card-box mb-30">
+        <div class="row">
+            <div class="col-4">
+                <input type="button" class="btn btn-success mr-2 mt-1 col-12 " value="Add" data-bind="click: chooseOptions.bind($data,'A')">
+            </div>
+            <div class="col-4 ">
+                <input type="button" class="btn btn-info mr-2 mt-1 col-12 " value="Update" data-bind="click: chooseOptions.bind($data,'U')">
+            </div>
+            <div class="col-4 ">
+                <input type="button" class="btn btn-danger mr-2 mt-1 col-12 " value="Delete" data-bind="click: chooseOptions.bind($data,'D')">
+            </div>
+        </div>
+        <br/>
+<div class="row">
+
+    
+    <div class="form-group row col-xl-4 col-md-4 col-sm-12 col-12">
+        <label class="col-12 col-form-label">Broker Code: <span class="mandatory"> *</span></label>
+        <div class="col-sm-12 col-md-10">
+            <input class="form-control form-control-sm" data-bind="value: OccupationID" type="text"  placeholder="Enter Broker Code ID">
+        </div>
+    </div>
+    <div class="form-group row col-xl-4 col-md-4 col-sm-12 col-12">
+        <label class="col-12 col-form-label">Broker Name: <span class="mandatory"> *</span></label>
+        <div class="col-sm-12 col-md-10">
+            <input class="form-control form-control-sm" data-bind="value: BrokerName" type="text" placeholder="Enter Broker Name">
+        </div>
+    </div>
+    <div class="form-group row col-xl-4 col-md-4 col-sm-12 col-12">
+        <label class="col-12 col-form-label">Broker Address: <span class="mandatory"> *</span></label>
+        <div class="col-sm-12 col-md-10">
+            <input class="form-control form-control-sm" data-bind="value: BrokerAdd" type="text"  placeholder="Enter Broker Address ">
+        </div>
+    </div>
+</div>
+
+<div class="row">
+
+    <div class="form-group row col-xl-4 col-md-4 col-sm-12 col-12">
+        <label class="col-12 col-form-label">Broker Nepali Name: </label>
+        <div class="col-sm-12 col-md-10">
+            <input class="form-control form-control-sm" data-bind="value: BrokerNpName" type="text" placeholder="Enter Broker Nepali Name">
+        </div>
+    </div>
+   
+    <div class="form-group row col-xl-4 col-md-4 col-sm-12 col-12">
+        <label class="col-12 col-form-label">Broker Nepali Address: </label>
+        <div class="col-sm-12 col-md-10">
+            <input class="form-control form-control-sm" data-bind="value: BrokerNpAdd" type="text" placeholder="Enter Broker Nepali Address">
+        </div>
+    </div>
+    <div class="form-group row col-xl-4 col-md-4 col-sm-12 col-12">
+        <label class="col-12 col-form-label">Broker Contact Person: <span class="mandatory"> *</span></label>
+        <div class="col-sm-12 col-md-10">
+            <input class="form-control form-control-sm" data-bind="value: BrokerCont" type="text" placeholder="Enter Broker Contact Person">
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="form-group row col-xl-4 col-md-4 col-sm-12 col-12">
+        <label class="col-12 col-form-label">Broker Telephone No: </label>
+        <div class="col-sm-12 col-md-10">
+            <input class="form-control form-control-sm" data-bind="value: BrokerTelNo" type="text" placeholder="Enter Broker Telephobe No">
+        </div>
+    </div>
+</div>
+
+
+
+
+<hr class="my-4 ">
+                                <div class="row col-12 p-4 justify-content-center ">
+                                    <div class="col-xl-2 col-md-3 col-sm-4 col-6 ">
+                                        <input type="button" class="btn btn-success mr-2 mt-1 col-12 " value="Save" data-bind="click: SaveCashDividend">
+                                    </div>
+                                    <div class="col-xl-2 col-md-3 col-sm-4 col-6 ">
+                                        <input type="button" class="btn btn-primary   mr-2 mt-1 col-12 " value="Report">
+                                    </div>
+                                    <div class="col-xl-2 col-md-3 col-sm-4 col-6 ">
+                                        <input type="button" class="btn btn-warning  mr-2 mt-1 col-12 " value="Clear">
+                                    </div>
+                                    
+                                </div>
+</div>
+</div>
+</div></div>
+</div>
+</html>
