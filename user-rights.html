@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Basic Page Info -->
+    <meta charset="utf-8">
+    <title>Shareplus - User Rights</title>
+
+    <!-- Site favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="vendors/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="vendors/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="vendors/images/favicon-16x16.png">
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/ruang-admin.min.css" rel="stylesheet">
+
+    <!-- Select2 -->
+    <link href="vendor/select2/dist/css/select2.min.css" rel="stylesheet" type="text/css">
+    <!-- Page wise custom style -->
+    <style>
+        .select2 {
+            width: 100% !important;
+        }
+        
+        .select2-container--default .select2-selection--single {
+            height: 40px !important;
+            padding-top: 5px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="pd-ltr-20 xs-pd-20-10">
+            <div class="min-height-200px">
+                <div class="page-header">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12">
+                            <div class="title">
+                                <h4>System</h4>
+                            </div>
+                            <nav aria-label="breadcrumb" role="navigation">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item">Maintain User</li>
+                                    <li class="breadcrumb-item active" aria-current="page">User Rights</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <!-- Default Basic Forms Start -->
+                <div class="card mb-4">
+                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                        <h6 class="m-0 font-weight-bold text-primary">Create User</h6>
+                    </div>
+                    <hr class="my-1">
+                    <div class="card-body">
+                        <div class="pd-20 card-box mb-30">
+                            <div class="clearfix">
+                                <div class="pull-left">
+                                    <h4 class="text-blue h4">User Rights</h4>
+                                </div>
+                            </div>
+                            <form>
+
+                                <div class="row">
+                                    <div class="form-group row col-xl-6 col-md-12 col-sm-12 col-12">
+                                        <label class="col-sm-12 col-md-3 col-form-label" for="userSelect2">Username</label>
+                                        <div class="col-sm-12 col-md-10">
+                                            <select class="select2-single-placeholder form-control userSelect2" name="state" id="userSelect2">
+                                            <option value="">Select</option>
+                                            <option value="User1">User 1</option>
+                                            <option value="User2">User 2</option>
+                                          
+                                        </select>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <hr class="my-1">
+                                <div class="row">
+                                    <div class="form-group row col-xl-6 col-md-12 col-sm-12 col-12">
+                                        <label class="col-sm-12 col-md-3 col-form-label" for="companySelect2">Company</label>
+                                        <div class="col-sm-12 col-md-10">
+                                            <select class="select2-single-placeholder form-control companySelect2" name="state" id="companySelect2">
+                                            <option value="">Select</option>
+                                            <option value="Company1">Company 1</option>
+                                            <option value="Company2">Company 2</option>
+                                          
+                                        </select>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <hr class="my-1">
+                                <div class="row p-3">
+                                    <div class="form-group row col-sm-12 col-md-4 col-lg-4 col-xl-4 border-right border-left mr-1">
+                                        <div class="col-12">
+                                            <div>
+                                                <label class="weight-600">Maker User Rights</label>
+                                                <div class="custom-control custom-checkbox mb-5">
+                                                    <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                                    <label class="custom-control-label" for="customCheck1">Rights 1
+                                                    </label>
+                                                </div>
+                                                <div class="custom-control custom-checkbox mb-5">
+                                                    <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                                    <label class="custom-control-label" for="customCheck2">Rights 2
+                                                    </label>
+                                                </div>
+                                                <div class="custom-control custom-checkbox mb-5">
+                                                    <input type="checkbox" class="custom-control-input" id="customCheck3">
+                                                    <label class="custom-control-label" for="customCheck3">Rights 3
+                                                    </label>
+                                                </div>
+                                                <div class="custom-control custom-checkbox mb-5">
+                                                    <input type="checkbox" class="custom-control-input" id="customCheck4">
+                                                    <label class="custom-control-label" for="customCheck4">Rights 4
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row col-sm-12 col-md-4 col-lg-4 col-xl-4 border-right border-left mr-1">
+
+                                        <div class="col-12">
+                                            <div>
+                                                <label class="weight-600">Checker User Rights</label>
+                                                <div class="custom-control custom-checkbox mb-5">
+                                                    <input type="checkbox" class="custom-control-input" id="customCheck5">
+                                                    <label class="custom-control-label" for="customCheck5">Rights 1
+                                                    </label>
+                                                </div>
+                                                <div class="custom-control custom-checkbox mb-5">
+                                                    <input type="checkbox" class="custom-control-input" id="customCheck6">
+                                                    <label class="custom-control-label" for="customCheck6">Rights 2
+                                                    </label>
+                                                </div>
+                                                <div class="custom-control custom-checkbox mb-5">
+                                                    <input type="checkbox" class="custom-control-input" id="customCheck7">
+                                                    <label class="custom-control-label" for="customCheck7">Rights 3
+                                                    </label>
+                                                </div>
+                                                <div class="custom-control custom-checkbox mb-5">
+                                                    <input type="checkbox" class="custom-control-input" id="customCheck8">
+                                                    <label class="custom-control-label" for="customCheck8">Rights 4
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row col-sm-12 col-md-4 col-lg-4 col-xl-4 border-right border-left">
+                                        <div class="col-12">
+                                            <div>
+                                                <label class="weight-600">Common Rights</label>
+                                                <div class="custom-control custom-checkbox mb-5">
+                                                    <input type="checkbox" class="custom-control-input" id="customCheck9">
+                                                    <label class="custom-control-label" for="customCheck9">Rights 1
+                                                    </label>
+                                                </div>
+                                                <div class="custom-control custom-checkbox mb-5">
+                                                    <input type="checkbox" class="custom-control-input" id="customCheck10">
+                                                    <label class="custom-control-label" for="customCheck10">Rights 2
+                                                    </label>
+                                                </div>
+                                                <div class="custom-control custom-checkbox mb-5">
+                                                    <input type="checkbox" class="custom-control-input" id="customCheck11">
+                                                    <label class="custom-control-label" for="customCheck11">Rights 3
+                                                    </label>
+                                                </div>
+                                                <div class="custom-control custom-checkbox mb-5">
+                                                    <input type="checkbox" class="custom-control-input" id="customCheck12">
+                                                    <label class="custom-control-label" for="customCheck12">Rights 4
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row col-12 p-4 justify-content-center">
+                                    <div class="col-xl-2 col-md-3 col-sm-4 col-12">
+                                        <input type="button" class="btn btn-success mr-2 mt-1 col-12" value="Add" id="button">
+                                    </div>
+                                    <div class="col-xl-2 col-md-3 col-sm-4 col-12">
+                                        <input type="button" class="btn btn-info mr-2 mt-1 col-12" value="Update">
+                                    </div>
+                                    <div class="col-xl-2 col-md-3 col-sm-4 col-12">
+                                        <input type="button" class="btn btn-success mr-2 mt-1 col-12" value="Save">
+                                    </div>
+                                    <div class="col-xl-2 col-md-3 col-sm-4 col-12">
+                                        <input type="button" class="btn btn-secondary mr-2 mt-1 col-12" value="Cancel">
+                                    </div>
+                                    <div class="col-xl-2 col-md-3 col-sm-4 col-12">
+                                        <input type="button" class="btn btn-danger mr-2 mt-1 col-12" value="Close">
+                                    </div>
+
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Default Basic Forms End -->
+
+            </div>
+        </div>
+    </div>
+    <!-- js -->
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
+
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Select2 -->
+    <script src="vendor/select2/dist/js/select2.min.js"></script>
+    <script src="js/ruang-admin.min.js"></script>
+
+    <script>
+        $('#button').click(function(e) {
+            e.preventDefault();
+        })
+        $(document).ready(function() {
+
+            // Select2 Single  with Placeholder for User
+            $('.userSelect2').select2({
+                placeholder: "Select User Type",
+                allowClear: true
+            });
+            // Select2 Single  with Placeholder for Companny
+            $('.companySelect2').select2({
+                placeholder: "Select Company",
+                allowClear: true
+            });
+
+        });
+    </script>
+</body>
+
+</html>

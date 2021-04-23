@@ -1,0 +1,1301 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Basic Page Info -->
+    <meta charset="utf-8">
+    <title>Shareplus - ShareHolder Information</title>
+
+    <!-- Site favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="vendors/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="vendors/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="vendors/images/favicon-16x16.png">
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/ruang-admin.min.css" rel="stylesheet">
+    <!-- Select2 -->
+    <link href="vendor/select2/dist/css/select2.min.css" rel="stylesheet" type="text/css">
+    <!-- Bootstrap DatePicker -->
+    <link href="vendor/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet">
+    <!-- Datatables -->
+    <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <link href="vendor/datatables/buttons.dataTables.min.css" rel="stylesheet" type="text/css">
+    <!-- Page wise custom style -->
+    <style>
+        .select2 {
+            width: 100% !important;
+        }
+        
+        .select2-container--default .select2-selection--single {
+            height: 40px !important;
+            padding-top: 5px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="pd-ltr-20 xs-pd-20-10">
+            <div class="min-height-200px">
+                <div class="page-header">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12">
+                            <div class="title">
+                                <h4>Share Handling</h4>
+                            </div>
+                            <nav aria-label="breadcrumb" role="navigation">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item">Share Holder</li>
+                                    <li class="breadcrumb-item active" aria-current="page">ShareHolder Information</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <!-- Default Basic Forms Start -->
+                <div class="card mb-4">
+                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                        <h6 class="m-0 font-weight-bold text-primary">ShareHolder Information</h6>
+                    </div>
+
+                    <hr class="my-1">
+                    <div class="card-body">
+                        <div class="pd-20 card-box mb-30">
+                            <div class="clearfix">
+                                <div class="pull-left">
+                                    <h4 class="text-blue h4">ShareHolder Information</h4>
+                                </div>
+                            </div>
+                            <form>
+                                <div class="row">
+                                    <div class="form-group row col-md-6 col-sm-12">
+                                        <label class="col-sm-12 col-md-3 col-form-label" for="companySelect2">Company</label>
+                                        <div class="col-sm-12 col-md-11">
+                                            <select class="select2-single-placeholder form-control companySelect2" name="state" id="companySelect2">
+                                                <option value="">Select</option>
+                                                <option value="Company1">Company 1</option>
+                                                <option value="Company2">Company 2</option>
+
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-2 col-sm-12 pt-4" style="margin-right: -45px;">
+                                        <button type="button" class="btn btn-primary mt-3" data-toggle="modal" data-target="#searchQueryModalTheme">Search By Query</button>
+                                    </div>
+                                    <div class="form-group col-md-2 col-sm-12 pt-4" style="margin-right: -45px;">
+                                        <button type="button" class="btn btn-primary mt-3" data-toggle="modal" data-target="#certificateModalTheme">Show Certificate</button>
+                                    </div>
+
+                                    <div class="form-group col-md-2 col-sm-12 pt-4">
+                                        <button type="button" class="btn btn-primary mt-3" name="" id="" data-toggle="modal" data-target="#signatureModalTheme">Show
+                                            Signature</button>
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="form-group row col-xl-3 col-md-6 col-sm-12 col-12">
+                                        <label class="col-12 col-form-label">Shholder No:</label>
+                                        <div class="col-sm-12 col-md-10">
+                                            <input class="form-control" type="text" placeholder="Enter Share Holder Number">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row col-xl-3 col-md-6 col-sm-12 col-12">
+                                        <label class="col-12 col-form-label" for="shownerTypeSelect2">Showner
+                                            Type</label>
+                                        <div class="col-sm-12 col-md-10">
+                                            <select class="select2-single-placeholder form-control shownerTypeSelect2" name="state" id="shownerTypeSelect2">
+                                                <option value="">Select</option>
+                                                <option value="ShownerType1">ShownerType 1</option>
+                                                <option value="ShownerType2">ShownerType 2</option>
+
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row col-xl-3 col-md-6 col-sm-12 col-12">
+                                        <label class="col-12 col-form-label" for="subShownerTypeSelect2">Sub Showner
+                                            Type</label>
+                                        <div class="col-sm-12 col-md-10">
+                                            <select class="select2-single-placeholder form-control subShownerTypeSelect2" name="state" id="subShownerTypeSelect2">
+                                                <option value="">Select</option>
+                                                <option value="subShownerType1">Sub-ShownerType 1</option>
+                                                <option value="subShownerType2">Sub-ShownerType 2</option>
+
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row col-xl-3 col-md-6 col-sm-12 col-12">
+                                        <label class="col-12 col-form-label" for="titleSelect2">Title</label>
+                                        <div class="col-sm-12 col-md-10">
+                                            <select class="select2-single-placeholder form-control titleSelect2" name="state" id="titleSelect2">
+                                                <option value="">Select</option>
+                                                <option value="Mr.">Mr.</option>
+                                                <option value="Ms.">Ms.</option>
+                                                <option value="Mrs.">Mrs.</option>
+
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="row">
+                                    <div class="form-group row col-xl-3 col-md-6 col-sm-12 col-12">
+                                        <label class="col-12 col-form-label">First Name</label>
+                                        <div class="col-sm-12 col-md-10">
+                                            <input class="form-control" type="text" placeholder="Enter First Name">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row col-xl-3 col-md-6 col-sm-12 col-12">
+                                        <label class="col-12 col-form-label">Last Name</label>
+                                        <div class="col-sm-12 col-md-10">
+                                            <input class="form-control" type="text" placeholder="Enter Middle/Last Name">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row col-xl-3 col-md-6 col-sm-12 col-12">
+                                        <label class="col-12 col-form-label" for="nepaliTitleSelect2">Nepali Title
+                                        </label>
+                                        <div class="col-sm-12 col-md-10">
+                                            <select class="select2-single-placeholder form-control nepaliTitleSelect2" name="state" id="nepaliTitleSelect2">
+                                                <option value="">छान्नुहोस</option>
+                                                <option value="श्री">श्री</option>
+                                                <option value="सुश्री">सुश्री</option>
+                                                <option value="श्रीमान">श्रीमान</option>
+                                                <option value="श्रीमती">श्रीमती</option>
+
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row col-xl-3 col-md-6 col-sm-12 col-12">
+                                        <label class="col-12 col-form-label">नाम</label>
+                                        <div class="col-sm-12 col-md-10">
+                                            <input class="form-control" type="text" placeholder="पुरा नाम लेख्नुहोस">
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr class="my-2">
+                                <div class="row">
+                                    <div class="form-group row col-xl-6 col-md-6 col-sm-12 col-12" style="margin-right: -40px;">
+                                        <label class=" col-12 col-form-label ">Address(Block No/Tole/City)</label>
+                                        <div class="col-sm-12 col-md-11 ">
+                                            <input class="form-control " type="text " placeholder="Full Address ">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row col-xl-6 col-md-6 col-sm-12 col-12 ">
+                                        <label class="col-12 col-form-label ">ठेगाना</label>
+                                        <div class="col-sm-12 col-md-11 ">
+                                            <input class="form-control " type="text " placeholder="पुरा ठेगाना लेख्नुहोस ">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row ">
+                                    <div class="form-group row col-xl-3 col-md-6 col-sm-12 col-12 ">
+                                        <label class="col-12 col-form-label ">Address 1</label>
+                                        <div class="col-sm-12 col-md-10 ">
+                                            <input class="form-control " type="text " placeholder="Address 1 ">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row col-xl-3 col-md-6 col-sm-12 col-12 ">
+                                        <label class="col-12 col-form-label ">Address 2</label>
+                                        <div class="col-sm-12 col-md-10 ">
+                                            <input class="form-control " type="text " placeholder="Address 2 ">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row col-xl-3 col-md-6 col-sm-12 col-12 ">
+                                        <label class="col-12 col-form-label ">P.O. Box No.</label>
+                                        <div class="col-sm-12 col-md-10 ">
+                                            <input class="form-control " type="text " placeholder="Post Office Box No ">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row col-xl-3 col-md-6 col-sm-12 col-12 ">
+                                        <label class="col-12 col-form-label " for="districtCodeSelect2 ">District Code
+                                        </label>
+                                        <div class="col-sm-12 col-md-10 ">
+                                            <select class="select2-single-placeholder form-control districtCodeSelect2 " name="state " id="districtCodeSelect2 ">
+                                                <option value=" ">Select</option>
+                                                <option value="AX ">Aland Islands</option>
+                                                <option value="AF ">Afghanistan</option>
+                                                <option value="AL ">Albania</option>
+                                                <option value="DZ ">Algeria</option>
+                                                <option value="AD ">Andorra</option>
+                                                <option value="AO ">Angola</option>
+                                                <option value="AI ">Anguilla</option>
+                                                <option value="AQ ">Antarctica</option>
+                                                <option value="AG ">Antigua and Barbuda</option>
+                                                <option value="AR ">Argentina</option>
+                                                <option value="AM ">Armenia</option>
+                                                <option value="AW ">Aruba</option>
+                                                <option value="AU ">Australia</option>
+                                                <option value="AT ">Austria</option>
+                                                <option value="AZ ">Azerbaijan</option>
+                                                <option value="BS ">Bahamas</option>
+                                                <option value="BH ">Bahrain</option>
+                                                <option value="BD ">Bangladesh</option>
+                                                <option value="BB ">Barbados</option>
+                                                <option value="BY ">Belarus</option>
+                                                <option value="PW ">Belau</option>
+                                                <option value="BE ">Belgium</option>
+                                                <option value="BZ ">Belize</option>
+                                                <option value="BJ ">Benin</option>
+                                                <option value="BM ">Bermuda</option>
+                                                <option value="BT ">Bhutan</option>
+                                                <option value="BO ">Bolivia</option>
+                                                <option value="BQ ">Bonaire, Saint Eustatius and Saba</option>
+                                                <option value="BA ">Bosnia and Herzegovina</option>
+                                                <option value="BW ">Botswana</option>
+                                                <option value="BV ">Bouvet Island</option>
+                                                <option value="BR ">Brazil</option>
+                                                <option value="IO ">British Indian Ocean Territory</option>
+                                                <option value="VG ">British Virgin Islands</option>
+                                                <option value="BN ">Brunei</option>
+                                                <option value="BG ">Bulgaria</option>
+                                                <option value="BF ">Burkina Faso</option>
+                                                <option value="BI ">Burundi</option>
+                                                <option value="KH ">Cambodia</option>
+                                                <option value="CM ">Cameroon</option>
+                                                <option value="CA ">Canada</option>
+                                                <option value="CV ">Cape Verde</option>
+                                                <option value="KY ">Cayman Islands</option>
+                                                <option value="CF ">Central African Republic</option>
+                                                <option value="TD ">Chad</option>
+                                                <option value="CL ">Chile</option>
+                                                <option value="CN ">China</option>
+                                                <option value="CX ">Christmas Island</option>
+                                                <option value="CC ">Cocos (Keeling) Islands</option>
+                                                <option value="CO ">Colombia</option>
+                                                <option value="KM ">Comoros</option>
+                                                <option value="CG ">Congo (Brazzaville)</option>
+                                                <option value="CD ">Congo (Kinshasa)</option>
+                                                <option value="CK ">Cook Islands</option>
+                                                <option value="CR ">Costa Rica</option>
+                                                <option value="HR ">Croatia</option>
+                                                <option value="CU ">Cuba</option>
+                                                <option value="CW ">CuraÇao</option>
+                                                <option value="CY ">Cyprus</option>
+                                                <option value="CZ ">Czech Republic</option>
+                                                <option value="DK ">Denmark</option>
+                                                <option value="DJ ">Djibouti</option>
+                                                <option value="DM ">Dominica</option>
+                                                <option value="DO ">Dominican Republic</option>
+                                                <option value="EC ">Ecuador</option>
+                                                <option value="EG ">Egypt</option>
+                                                <option value="SV ">El Salvador</option>
+                                                <option value="GQ ">Equatorial Guinea</option>
+                                                <option value="ER ">Eritrea</option>
+                                                <option value="EE ">Estonia</option>
+                                                <option value="ET ">Ethiopia</option>
+                                                <option value="FK ">Falkland Islands</option>
+                                                <option value="FO ">Faroe Islands</option>
+                                                <option value="FJ ">Fiji</option>
+                                                <option value="FI ">Finland</option>
+                                                <option value="FR ">France</option>
+                                                <option value="GF ">French Guiana</option>
+                                                <option value="PF ">French Polynesia</option>
+                                                <option value="TF ">French Southern Territories</option>
+                                                <option value="GA ">Gabon</option>
+                                                <option value="GM ">Gambia</option>
+                                                <option value="GE ">Georgia</option>
+                                                <option value="DE ">Germany</option>
+                                                <option value="GH ">Ghana</option>
+                                                <option value="GI ">Gibraltar</option>
+                                                <option value="GR ">Greece</option>
+                                                <option value="GL ">Greenland</option>
+                                                <option value="GD ">Grenada</option>
+                                                <option value="GP ">Guadeloupe</option>
+                                                <option value="GT ">Guatemala</option>
+                                                <option value="GG ">Guernsey</option>
+                                                <option value="GN ">Guinea</option>
+                                                <option value="GW ">Guinea-Bissau</option>
+                                                <option value="GY ">Guyana</option>
+                                                <option value="HT ">Haiti</option>
+                                                <option value="HM ">Heard Island and McDonald Islands</option>
+                                                <option value="HN ">Honduras</option>
+                                                <option value="HK ">Hong Kong</option>
+                                                <option value="HU ">Hungary</option>
+                                                <option value="IS ">Iceland</option>
+                                                <option value="IN ">India</option>
+                                                <option value="ID ">Indonesia</option>
+                                                <option value="IR ">Iran</option>
+                                                <option value="IQ ">Iraq</option>
+                                                <option value="IM ">Isle of Man</option>
+                                                <option value="IL ">Israel</option>
+                                                <option value="IT ">Italy</option>
+                                                <option value="CI ">Ivory Coast</option>
+                                                <option value="JM ">Jamaica</option>
+                                                <option value="JP ">Japan</option>
+                                                <option value="JE ">Jersey</option>
+                                                <option value="JO ">Jordan</option>
+                                                <option value="KZ ">Kazakhstan</option>
+                                                <option value="KE ">Kenya</option>
+                                                <option value="KI ">Kiribati</option>
+                                                <option value="KW ">Kuwait</option>
+                                                <option value="KG ">Kyrgyzstan</option>
+                                                <option value="LA ">Laos</option>
+                                                <option value="LV ">Latvia</option>
+                                                <option value="LB ">Lebanon</option>
+                                                <option value="LS ">Lesotho</option>
+                                                <option value="LR ">Liberia</option>
+                                                <option value="LY ">Libya</option>
+                                                <option value="LI ">Liechtenstein</option>
+                                                <option value="LT ">Lithuania</option>
+                                                <option value="LU ">Luxembourg</option>
+                                                <option value="MO ">Macao S.A.R., China</option>
+                                                <option value="MK ">Macedonia</option>
+                                                <option value="MG ">Madagascar</option>
+                                                <option value="MW ">Malawi</option>
+                                                <option value="MY ">Malaysia</option>
+                                                <option value="MV ">Maldives</option>
+                                                <option value="ML ">Mali</option>
+                                                <option value="MT ">Malta</option>
+                                                <option value="MH ">Marshall Islands</option>
+                                                <option value="MQ ">Martinique</option>
+                                                <option value="MR ">Mauritania</option>
+                                                <option value="MU ">Mauritius</option>
+                                                <option value="YT ">Mayotte</option>
+                                                <option value="MX ">Mexico</option>
+                                                <option value="FM ">Micronesia</option>
+                                                <option value="MD ">Moldova</option>
+                                                <option value="MC ">Monaco</option>
+                                                <option value="MN ">Mongolia</option>
+                                                <option value="ME ">Montenegro</option>
+                                                <option value="MS ">Montserrat</option>
+                                                <option value="MA ">Morocco</option>
+                                                <option value="MZ ">Mozambique</option>
+                                                <option value="MM ">Myanmar</option>
+                                                <option value="NA ">Namibia</option>
+                                                <option value="NR ">Nauru</option>
+                                                <option value="NP ">Nepal</option>
+                                                <option value="NL ">Netherlands</option>
+                                                <option value="AN ">Netherlands Antilles</option>
+                                                <option value="NC ">New Caledonia</option>
+                                                <option value="NZ ">New Zealand</option>
+                                                <option value="NI ">Nicaragua</option>
+                                                <option value="NE ">Niger</option>
+                                                <option value="NG ">Nigeria</option>
+                                                <option value="NU ">Niue</option>
+                                                <option value="NF ">Norfolk Island</option>
+                                                <option value="KP ">North Korea</option>
+                                                <option value="NO ">Norway</option>
+                                                <option value="OM ">Oman</option>
+                                                <option value="PK ">Pakistan</option>
+                                                <option value="PS ">Palestinian Territory</option>
+                                                <option value="PA ">Panama</option>
+                                                <option value="PG ">Papua New Guinea</option>
+                                                <option value="PY ">Paraguay</option>
+                                                <option value="PE ">Peru</option>
+                                                <option value="PH ">Philippines</option>
+                                                <option value="PN ">Pitcairn</option>
+                                                <option value="PL ">Poland</option>
+                                                <option value="PT ">Portugal</option>
+                                                <option value="QA ">Qatar</option>
+                                                <option value="IE ">Republic of Ireland</option>
+                                                <option value="RE ">Reunion</option>
+                                                <option value="RO ">Romania</option>
+                                                <option value="RU ">Russia</option>
+                                                <option value="RW ">Rwanda</option>
+                                                <option value="ST ">São Tomé and Príncipe</option>
+                                                <option value="BL ">Saint Barthélemy</option>
+                                                <option value="SH ">Saint Helena</option>
+                                                <option value="KN ">Saint Kitts and Nevis</option>
+                                                <option value="LC ">Saint Lucia</option>
+                                                <option value="SX ">Saint Martin (Dutch part)</option>
+                                                <option value="MF ">Saint Martin (French part)</option>
+                                                <option value="PM ">Saint Pierre and Miquelon</option>
+                                                <option value="VC ">Saint Vincent and the Grenadines</option>
+                                                <option value="SM ">San Marino</option>
+                                                <option value="SA ">Saudi Arabia</option>
+                                                <option value="SN ">Senegal</option>
+                                                <option value="RS ">Serbia</option>
+                                                <option value="SC ">Seychelles</option>
+                                                <option value="SL ">Sierra Leone</option>
+                                                <option value="SG ">Singapore</option>
+                                                <option value="SK ">Slovakia</option>
+                                                <option value="SI ">Slovenia</option>
+                                                <option value="SB ">Solomon Islands</option>
+                                                <option value="SO ">Somalia</option>
+                                                <option value="ZA ">South Africa</option>
+                                                <option value="GS ">South Georgia/Sandwich Islands</option>
+                                                <option value="KR ">South Korea</option>
+                                                <option value="SS ">South Sudan</option>
+                                                <option value="ES ">Spain</option>
+                                                <option value="LK ">Sri Lanka</option>
+                                                <option value="SD ">Sudan</option>
+                                                <option value="SR ">Suriname</option>
+                                                <option value="SJ ">Svalbard and Jan Mayen</option>
+                                                <option value="SZ ">Swaziland</option>
+                                                <option value="SE ">Sweden</option>
+                                                <option value="CH ">Switzerland</option>
+                                                <option value="SY ">Syria</option>
+                                                <option value="TW ">Taiwan</option>
+                                                <option value="TJ ">Tajikistan</option>
+                                                <option value="TZ ">Tanzania</option>
+                                                <option value="TH ">Thailand</option>
+                                                <option value="TL ">Timor-Leste</option>
+                                                <option value="TG ">Togo</option>
+                                                <option value="TK ">Tokelau</option>
+                                                <option value="TO ">Tonga</option>
+                                                <option value="TT ">Trinidad and Tobago</option>
+                                                <option value="TN ">Tunisia</option>
+                                                <option value="TR ">Turkey</option>
+                                                <option value="TM ">Turkmenistan</option>
+                                                <option value="TC ">Turks and Caicos Islands</option>
+                                                <option value="TV ">Tuvalu</option>
+                                                <option value="UG ">Uganda</option>
+                                                <option value="UA ">Ukraine</option>
+                                                <option value="AE ">United Arab Emirates</option>
+                                                <option value="GB ">United Kingdom (UK)</option>
+                                                <option value="US ">USA (US)</option>
+                                                <option value="UY ">Uruguay</option>
+                                                <option value="UZ ">Uzbekistan</option>
+                                                <option value="VU ">Vanuatu</option>
+                                                <option value="VA ">Vatican</option>
+                                                <option value="VE ">Venezuela</option>
+                                                <option value="VN ">Vietnam</option>
+                                                <option value="WF ">Wallis and Futuna</option>
+                                                <option value="EH ">Western Sahara</option>
+                                                <option value="WS ">Western Samoa</option>
+                                                <option value="YE ">Yemen</option>
+                                                <option value="ZM ">Zambia</option>
+                                                <option value="ZW ">Zimbabwe</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row ">
+                                    <div class="form-group row col-xl-3 col-md-3 col-sm-12 col-12 ">
+                                        <label class="col-12 col-form-label ">Citizenship No</label>
+                                        <div class="col-sm-12 col-md-10 ">
+                                            <input class="form-control " type="text " placeholder="Enter Citizenship No. ">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row col-xl-3 col-md-3 col-sm-12 col-12 ">
+                                        <label class="col-12 col-form-label ">Email Address</label>
+                                        <div class="col-sm-12 col-md-10 ">
+                                            <input class="form-control " type="text " placeholder="Enter Email Address ">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row col-xl-3 col-md-3 col-sm-12 col-12 ">
+                                        <label class="col-12 col-form-label ">Telephone No</label>
+                                        <div class="col-sm-12 col-md-10 ">
+                                            <input class="form-control " type="text " placeholder="Enter Telephone No. ">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row col-xl-3 col-md-3 col-sm-12 col-12 ">
+                                        <label class="col-12 col-form-label ">Mobile No</label>
+                                        <div class="col-sm-12 col-md-10 ">
+                                            <input class="form-control " type="text " placeholder="Enter Mobile No. ">
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="row ">
+
+                                    <div class="form-group row col-xl-6 col-md-12 col-sm-12 col-12 " style="margin-right: -40px;">
+                                        <label class="col-12 col-form-label ">Bank Name</label>
+                                        <div class="col-sm-12 col-md-11 ">
+                                            <input class="form-control " type="text " placeholder="Enter Bank Name ">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row col-xl-6 col-md-12 col-sm-12 col-12 ">
+                                        <label class="col-12 col-form-label ">Bank Account Number</label>
+                                        <div class="col-sm-12 col-md-11 ">
+                                            <input class="form-control " type="text " placeholder="Enter Bank Account Number ">
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr class="my-4 ">
+                                <div class="row ">
+                                    <div class="form-group row col-xl-3 col-md-3 col-sm-12 col-12 ">
+                                        <label class="col-12 col-form-label ">Father's Name</label>
+                                        <div class="col-sm-12 col-md-10 ">
+                                            <input class="form-control " type="text " placeholder="Father's Full Name">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row col-xl-3 col-md-3 col-sm-12 col-12 ">
+                                        <label class="col-12 col-form-label ">Mother's Name</label>
+                                        <div class="col-sm-12 col-md-10 ">
+                                            <input class="form-control " type="text " placeholder="Mother's Full Name">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row col-xl-3 col-md-3 col-sm-12 col-12 ">
+                                        <label class="col-12 col-form-label ">Spouse Name</label>
+                                        <div class="col-sm-12 col-md-10 ">
+                                            <input class="form-control " type="text " placeholder="Enter Spouse's Name ">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row col-xl-3 col-md-6 col-sm-12 col-12">
+                                        <label class="col-12 col-form-label" for="occupationSelect2">Occupation</label>
+                                        <div class="col-sm-12 col-md-10">
+                                            <select class="select2-single-placeholder form-control occupationSelect2" name="state" id="occupationSelect2">
+                                                <option value="">Select</option>
+                                                <option value="Occupation1">Occupation1</option>
+                                                <option value="Occupation2">Occupation2</option>
+                                                <option value="Occupation3">Occupation3</option>
+
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <hr class="my-4 ">
+                                <div class="row ">
+                                    <div class="form-group col-12">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="checkNominee">
+                                            <label class="custom-control-label" for="checkNominee">Nominee</label>
+                                        </div>
+
+                                    </div>
+                                    <div class="form-group row col-xl-3 col-md-3 col-sm-12 col-12 ">
+                                        <label class="col-12 col-form-label ">Nominees's Name</label>
+                                        <div class="col-sm-12 col-md-10 ">
+                                            <input class="form-control " type="text " placeholder="Nominees's Full Name">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row col-xl-3 col-md-3 col-sm-12 col-12 ">
+                                        <label class="col-12 col-form-label ">Relation</label>
+                                        <div class="col-sm-12 col-md-10 ">
+                                            <input class="form-control " type="text " placeholder="State Relationship">
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr class="my-4 ">
+
+                                <div class="row ">
+                                    <div class="form-group col-12">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="checkMinor">
+                                            <label class="custom-control-label" for="checkMinor">Minor</label>
+                                        </div>
+
+                                    </div>
+                                    <div class="form-group row col-xl-3 col-md-3 col-sm-12 col-12 ">
+                                        <label class="col-12 col-form-label ">Guardian's Name</label>
+                                        <div class="col-sm-12 col-md-10 ">
+                                            <input class="form-control " type="text " placeholder="Guardian's Full Name">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row col-xl-3 col-md-3 col-sm-12 col-12 ">
+                                        <label class="col-12 col-form-label ">Relation</label>
+                                        <div class="col-sm-12 col-md-10 ">
+                                            <input class="form-control " type="text " placeholder="State Relationship">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row col-xl-3 col-md-3 col-sm-12 col-12 " id="simple-date1">
+                                        <label class="col-sm-12 col-md-3 col-form-label" for="dateOfBirth">DOB</label>
+                                        <div class="input-group date col-sm-12 col-md-10">
+                                            <div class="input-group-prepend">
+
+                                            </div>
+                                            <input type="text" class="form-control" placeholder="Select a Date" id="dateOfBirth">
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr class="my-4 ">
+                                <div class="row col-12 p-4 justify-content-center ">
+                                    <div class="col-xl-2 col-md-3 col-sm-4 col-6 ">
+                                        <input type="button " class="btn btn-success mr-2 mt-1 col-12 " value="Add " id="button ">
+                                    </div>
+                                    <div class="col-xl-2 col-md-3 col-sm-4 col-6 ">
+                                        <input type="button " class="btn btn-info mr-2 mt-1 col-12 " value="Update ">
+                                    </div>
+                                    <div class="col-xl-2 col-md-3 col-sm-4 col-6 ">
+                                        <input type="button " class="btn btn-danger mr-2 mt-1 col-12 " value="Delete ">
+                                    </div>
+                                    <div class="col-xl-2 col-md-3 col-sm-4 col-6 ">
+                                        <input type="button " class="btn btn-success mr-2 mt-1 col-12 " value="Save ">
+                                    </div>
+                                    <div class="col-xl-2 col-md-3 col-sm-4 col-6 ">
+                                        <input type="button " class="btn btn-secondary mr-2 mt-1 col-12 " value="Cancel ">
+                                    </div>
+                                    <div class="col-xl-2 col-md-3 col-sm-4 col-6 ">
+                                        <input type="button" class="btn btn-secondary mr-2 mt-1 col-12 " value="Report">
+                                    </div>
+
+
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Default Basic Forms End -->
+
+                <!-- Search Query Modal Theme -->
+                <!-- Modal -->
+                <div class="modal fade" id="searchQueryModalTheme" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form class="col-12">
+                                    <div class="card col-12">
+                                        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                            <h6 class="m-0 font-weight-bold text-primary">Search ShareHolder</h6>
+                                        </div>
+                                        <hr class="my-1">
+                                        <div class="card-body">
+                                            <div class="form-group row col-12">
+                                                <label class="col-form-label col-2" for="companySelect2">Company</label>
+                                                <div class="col-10">
+                                                    <input class="form-control" readonly type="text" value="Company Code - Company Name ">
+                                                </div>
+                                            </div>
+
+                                            <fieldset class="form-group mt-3">
+                                                <div class="row col-12">
+
+                                                    <div class="row col-12 pl-4">
+                                                        <div class="custom-control custom-radio col-3">
+                                                            <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                                                            <label class="custom-control-label" for="customRadio1">Holder No.</label>
+                                                        </div>
+                                                        <div class="custom-control custom-radio col-3">
+                                                            <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                                                            <label class="custom-control-label" for="customRadio2">Holder Name</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                            <hr class="my-3">
+                                            <div class="form-group row col-12">
+                                                <label class="col-3 col-form-label">Shholder No:</label>
+                                                <div class="col-sm-6 col-md-6">
+                                                    <input class="form-control" type="text" placeholder="Enter Share Holder Number">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row col-12">
+                                                <label class="col-3 col-form-label">First Name</label>
+                                                <div class="col-sm-6 col-md-6">
+                                                    <input class="form-control" type="text" placeholder="Enter First Name">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row col-12">
+                                                <label class="col-3 col-form-label">Last Name</label>
+                                                <div class="col-sm-6 col-md-6">
+                                                    <input class="form-control" type="text" placeholder="Enter Last Name">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row col-12">
+                                                <label class="col-3 col-form-label">Father's Name</label>
+                                                <div class="col-sm-6 col-md-6">
+                                                    <input class="form-control" type="text" placeholder="Enter Father's Name">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row col-12">
+                                                <label class="col-3 col-form-label">GrandFather's Name</label>
+                                                <div class="col-sm-6 col-md-6">
+                                                    <input class="form-control" type="text" placeholder="Enter GrandFather's Name">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Search Holder</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Modal Scrollable -->
+                <div class="modal fade" id="certificateModalTheme" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable modal-xl" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalScrollableTitle">Modal scrollable title</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="col-12">
+                                    <div class="card mb-4">
+                                        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+
+                                        </div>
+                                        <div class="table-responsive p-3">
+                                            <div class="table-responsive p-3">
+                                                <table class="table align-items-center table-flush table-hover" id="dataTable">
+                                                    <thead class="thead-light">
+                                                        <tr>
+                                                            <th>S.N.</th>
+                                                            <th>Effective Date</th>
+                                                            <th>Entry By</th>
+                                                            <th>Share Type</th>
+                                                            <th>Issue Date</th>
+                                                            <th>PSL No</th>
+                                                            <th>PSL Change</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>1</td>
+                                                            <td>2021/03/24</td>
+                                                            <td>Administrator</td>
+                                                            <td>Bonus Share</td>
+                                                            <td>2021/03/24</td>
+                                                            <td>1</td>
+                                                            <td><select class="form-select">
+                                                                    <option selected>PSL</option>
+                                                                    <option value="P">Pledge</option>
+                                                                    <option value="S">Suspend</option>
+                                                                    <option value="L">Lost</option>
+                                                                </select></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>22</td>
+                                                            <td>2021/03/24</td>
+                                                            <td>Administrator</td>
+                                                            <td>Bonus Share</td>
+                                                            <td>2021/03/24</td>
+                                                            <td>1</td>
+                                                            <td><select class="form-select">
+                                                                    <option selected>PSL</option>
+                                                                    <option value="P">Pledge</option>
+                                                                    <option value="S">Suspend</option>
+                                                                    <option value="L">Lost</option>
+                                                                </select></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>1</td>
+                                                            <td>2021/03/24</td>
+                                                            <td>Administrator</td>
+                                                            <td>Bonus Share</td>
+                                                            <td>2021/03/24</td>
+                                                            <td>1</td>
+                                                            <td><select class="form-select">
+                                                                    <option selected>PSL</option>
+                                                                    <option value="P">Pledge</option>
+                                                                    <option value="S">Suspend</option>
+                                                                    <option value="L">Lost</option>
+                                                                </select></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>22</td>
+                                                            <td>2021/03/24</td>
+                                                            <td>Administrator</td>
+                                                            <td>Bonus Share</td>
+                                                            <td>2021/03/24</td>
+                                                            <td>1</td>
+                                                            <td><select class="form-select">
+                                                                    <option selected>PSL</option>
+                                                                    <option value="P">Pledge</option>
+                                                                    <option value="S">Suspend</option>
+                                                                    <option value="L">Lost</option>
+                                                                </select></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>1</td>
+                                                            <td>2021/03/24</td>
+                                                            <td>Administrator</td>
+                                                            <td>Bonus Share</td>
+                                                            <td>2021/03/24</td>
+                                                            <td>1</td>
+                                                            <td><select class="form-select">
+                                                                    <option selected>PSL</option>
+                                                                    <option value="P">Pledge</option>
+                                                                    <option value="S">Suspend</option>
+                                                                    <option value="L">Lost</option>
+                                                                </select></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>22</td>
+                                                            <td>2021/03/24</td>
+                                                            <td>Administrator</td>
+                                                            <td>Bonus Share</td>
+                                                            <td>2021/03/24</td>
+                                                            <td>1</td>
+                                                            <td><select class="form-select">
+                                                                    <option selected>PSL</option>
+                                                                    <option value="P">Pledge</option>
+                                                                    <option value="S">Suspend</option>
+                                                                    <option value="L">Lost</option>
+                                                                </select></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>1</td>
+                                                            <td>2021/03/24</td>
+                                                            <td>Administrator</td>
+                                                            <td>Bonus Share</td>
+                                                            <td>2021/03/24</td>
+                                                            <td>1</td>
+                                                            <td><select class="form-select">
+                                                                    <option selected>PSL</option>
+                                                                    <option value="P">Pledge</option>
+                                                                    <option value="S">Suspend</option>
+                                                                    <option value="L">Lost</option>
+                                                                </select></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>22</td>
+                                                            <td>2021/03/24</td>
+                                                            <td>Administrator</td>
+                                                            <td>Bonus Share</td>
+                                                            <td>2021/03/24</td>
+                                                            <td>1</td>
+                                                            <td><select class="form-select">
+                                                                    <option selected>PSL</option>
+                                                                    <option value="P">Pledge</option>
+                                                                    <option value="S">Suspend</option>
+                                                                    <option value="L">Lost</option>
+                                                                </select></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>1</td>
+                                                            <td>2021/03/24</td>
+                                                            <td>Administrator</td>
+                                                            <td>Bonus Share</td>
+                                                            <td>2021/03/24</td>
+                                                            <td>1</td>
+                                                            <td><select class="form-select">
+                                                                    <option selected>PSL</option>
+                                                                    <option value="P">Pledge</option>
+                                                                    <option value="S">Suspend</option>
+                                                                    <option value="L">Lost</option>
+                                                                </select></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>22</td>
+                                                            <td>2021/03/24</td>
+                                                            <td>Administrator</td>
+                                                            <td>Bonus Share</td>
+                                                            <td>2021/03/24</td>
+                                                            <td>1</td>
+                                                            <td><select class="form-select">
+                                                                    <option selected>PSL</option>
+                                                                    <option value="P">Pledge</option>
+                                                                    <option value="S">Suspend</option>
+                                                                    <option value="L">Lost</option>
+                                                                </select></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>1</td>
+                                                            <td>2021/03/24</td>
+                                                            <td>Administrator</td>
+                                                            <td>Bonus Share</td>
+                                                            <td>2021/03/24</td>
+                                                            <td>1</td>
+                                                            <td><select class="form-select">
+                                                                    <option selected>PSL</option>
+                                                                    <option value="P">Pledge</option>
+                                                                    <option value="S">Suspend</option>
+                                                                    <option value="L">Lost</option>
+                                                                </select></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>22</td>
+                                                            <td>2021/03/24</td>
+                                                            <td>Administrator</td>
+                                                            <td>Bonus Share</td>
+                                                            <td>2021/03/24</td>
+                                                            <td>1</td>
+                                                            <td><select class="form-select">
+                                                                    <option selected>PSL</option>
+                                                                    <option value="P">Pledge</option>
+                                                                    <option value="S">Suspend</option>
+                                                                    <option value="L">Lost</option>
+                                                                </select></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>1</td>
+                                                            <td>2021/03/24</td>
+                                                            <td>Administrator</td>
+                                                            <td>Bonus Share</td>
+                                                            <td>2021/03/24</td>
+                                                            <td>1</td>
+                                                            <td><select class="form-select">
+                                                                    <option selected>PSL</option>
+                                                                    <option value="P">Pledge</option>
+                                                                    <option value="S">Suspend</option>
+                                                                    <option value="L">Lost</option>
+                                                                </select></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>22</td>
+                                                            <td>2021/03/24</td>
+                                                            <td>Administrator</td>
+                                                            <td>Bonus Share</td>
+                                                            <td>2021/03/24</td>
+                                                            <td>1</td>
+                                                            <td><select class="form-select">
+                                                                    <option selected>PSL</option>
+                                                                    <option value="P">Pledge</option>
+                                                                    <option value="S">Suspend</option>
+                                                                    <option value="L">Lost</option>
+                                                                </select></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>1</td>
+                                                            <td>2021/03/24</td>
+                                                            <td>Administrator</td>
+                                                            <td>Bonus Share</td>
+                                                            <td>2021/03/24</td>
+                                                            <td>1</td>
+                                                            <td><select class="form-select">
+                                                                    <option selected>PSL</option>
+                                                                    <option value="P">Pledge</option>
+                                                                    <option value="S">Suspend</option>
+                                                                    <option value="L">Lost</option>
+                                                                </select></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>22</td>
+                                                            <td>2021/03/24</td>
+                                                            <td>Administrator</td>
+                                                            <td>Bonus Share</td>
+                                                            <td>2021/03/24</td>
+                                                            <td>1</td>
+                                                            <td><select class="form-select">
+                                                                    <option selected>PSL</option>
+                                                                    <option value="P">Pledge</option>
+                                                                    <option value="S">Suspend</option>
+                                                                    <option value="L">Lost</option>
+                                                                </select></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>1</td>
+                                                            <td>2021/03/24</td>
+                                                            <td>Administrator</td>
+                                                            <td>Bonus Share</td>
+                                                            <td>2021/03/24</td>
+                                                            <td>1</td>
+                                                            <td><select class="form-select">
+                                                                    <option selected>PSL</option>
+                                                                    <option value="P">Pledge</option>
+                                                                    <option value="S">Suspend</option>
+                                                                    <option value="L">Lost</option>
+                                                                </select></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>22</td>
+                                                            <td>2021/03/24</td>
+                                                            <td>Administrator</td>
+                                                            <td>Bonus Share</td>
+                                                            <td>2021/03/24</td>
+                                                            <td>1</td>
+                                                            <td><select class="form-select">
+                                                                    <option selected>PSL</option>
+                                                                    <option value="P">Pledge</option>
+                                                                    <option value="S">Suspend</option>
+                                                                    <option value="L">Lost</option>
+                                                                </select></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>1</td>
+                                                            <td>2021/03/24</td>
+                                                            <td>Administrator</td>
+                                                            <td>Bonus Share</td>
+                                                            <td>2021/03/24</td>
+                                                            <td>1</td>
+                                                            <td><select class="form-select">
+                                                                    <option selected>PSL</option>
+                                                                    <option value="P">Pledge</option>
+                                                                    <option value="S">Suspend</option>
+                                                                    <option value="L">Lost</option>
+                                                                </select></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>22</td>
+                                                            <td>2021/03/24</td>
+                                                            <td>Administrator</td>
+                                                            <td>Bonus Share</td>
+                                                            <td>2021/03/24</td>
+                                                            <td>1</td>
+                                                            <td><select class="form-select">
+                                                                    <option selected>PSL</option>
+                                                                    <option value="P">Pledge</option>
+                                                                    <option value="S">Suspend</option>
+                                                                    <option value="L">Lost</option>
+                                                                </select></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>1</td>
+                                                            <td>2021/03/24</td>
+                                                            <td>Administrator</td>
+                                                            <td>Bonus Share</td>
+                                                            <td>2021/03/24</td>
+                                                            <td>1</td>
+                                                            <td><select class="form-select">
+                                                                    <option selected>PSL</option>
+                                                                    <option value="P">Pledge</option>
+                                                                    <option value="S">Suspend</option>
+                                                                    <option value="L">Lost</option>
+                                                                </select></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>22</td>
+                                                            <td>2021/03/24</td>
+                                                            <td>Administrator</td>
+                                                            <td>Bonus Share</td>
+                                                            <td>2021/03/24</td>
+                                                            <td>1</td>
+                                                            <td><select class="form-select">
+                                                                    <option selected>PSL</option>
+                                                                    <option value="P">Pledge</option>
+                                                                    <option value="S">Suspend</option>
+                                                                    <option value="L">Lost</option>
+                                                                </select></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>1</td>
+                                                            <td>2021/03/24</td>
+                                                            <td>Administrator</td>
+                                                            <td>Bonus Share</td>
+                                                            <td>2021/03/24</td>
+                                                            <td>1</td>
+                                                            <td><select class="form-select">
+                                                                    <option selected>PSL</option>
+                                                                    <option value="P">Pledge</option>
+                                                                    <option value="S">Suspend</option>
+                                                                    <option value="L">Lost</option>
+                                                                </select></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>22</td>
+                                                            <td>2021/03/24</td>
+                                                            <td>Administrator</td>
+                                                            <td>Bonus Share</td>
+                                                            <td>2021/03/24</td>
+                                                            <td>1</td>
+                                                            <td><select class="form-select">
+                                                                    <option selected>PSL</option>
+                                                                    <option value="P">Pledge</option>
+                                                                    <option value="S">Suspend</option>
+                                                                    <option value="L">Lost</option>
+                                                                </select></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>1</td>
+                                                            <td>2021/03/24</td>
+                                                            <td>Administrator</td>
+                                                            <td>Bonus Share</td>
+                                                            <td>2021/03/24</td>
+                                                            <td>1</td>
+                                                            <td><select class="form-select">
+                                                                    <option selected>PSL</option>
+                                                                    <option value="P">Pledge</option>
+                                                                    <option value="S">Suspend</option>
+                                                                    <option value="L">Lost</option>
+                                                                </select></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>22</td>
+                                                            <td>2021/03/24</td>
+                                                            <td>Administrator</td>
+                                                            <td>Bonus Share</td>
+                                                            <td>2021/03/24</td>
+                                                            <td>1</td>
+                                                            <td><select class="form-select">
+                                                                    <option selected>PSL</option>
+                                                                    <option value="P">Pledge</option>
+                                                                    <option value="S">Suspend</option>
+                                                                    <option value="L">Lost</option>
+                                                                </select></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>1</td>
+                                                            <td>2021/03/24</td>
+                                                            <td>Administrator</td>
+                                                            <td>Bonus Share</td>
+                                                            <td>2021/03/24</td>
+                                                            <td>1</td>
+                                                            <td><select class="form-select">
+                                                                    <option selected>PSL</option>
+                                                                    <option value="P">Pledge</option>
+                                                                    <option value="S">Suspend</option>
+                                                                    <option value="L">Lost</option>
+                                                                </select></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>22</td>
+                                                            <td>2021/03/24</td>
+                                                            <td>Administrator</td>
+                                                            <td>Bonus Share</td>
+                                                            <td>2021/03/24</td>
+                                                            <td>1</td>
+                                                            <td><select class="form-select">
+                                                                    <option selected>PSL</option>
+                                                                    <option value="P">Pledge</option>
+                                                                    <option value="S">Suspend</option>
+                                                                    <option value="L">Lost</option>
+                                                                </select></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>1</td>
+                                                            <td>2021/03/24</td>
+                                                            <td>Administrator</td>
+                                                            <td>Bonus Share</td>
+                                                            <td>2021/03/24</td>
+                                                            <td>1</td>
+                                                            <td><select class="form-select">
+                                                                    <option selected>PSL</option>
+                                                                    <option value="P">Pledge</option>
+                                                                    <option value="S">Suspend</option>
+                                                                    <option value="L">Lost</option>
+                                                                </select></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>22</td>
+                                                            <td>2021/03/24</td>
+                                                            <td>Administrator</td>
+                                                            <td>Bonus Share</td>
+                                                            <td>2021/03/24</td>
+                                                            <td>1</td>
+                                                            <td><select class="form-select">
+                                                                    <option selected>PSL</option>
+                                                                    <option value="P">Pledge</option>
+                                                                    <option value="S">Suspend</option>
+                                                                    <option value="L">Lost</option>
+                                                                </select></td>
+                                                        </tr>
+
+
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Signature Modal Theme -->
+                <div class="modal fade" id="signatureModalTheme" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalCenterTitle">Modal Vertically Centered</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body row justify-content-center">
+                                <img class="border border-secondary" src="https://www.docsketch.com/assets/vip-signatures/meg-whitman-signature-6d8702b0a29cdefd60b03c5ede32840f725a63892cee04f45fee4cd78b350a9a.svg" alt="" height="300px" width="400px">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- js -->
+
+    <script src="vendor/jquery/jquery.min.js "></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js "></script>
+    <script src="vendor/jquery-easing/jquery.easing.min.js "></script>
+
+
+    <!-- Select2 -->
+    <script src="vendor/select2/dist/js/select2.min.js "></script>
+    <!-- Bootstrap Datepicker -->
+    <script src="vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js "></script>
+    <!-- Datatables -->
+    <!-- Page level plugins -->
+    <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+    <script src="vendor/datatables/dataTables.buttons.min.js"></script>
+    <script src="vendor/datatables/jszip.min.js"></script>
+    <script src="vendor/datatables/buttons.html5.min.js"></script>
+    <!-- RuangAdmin Javascript -->
+    <script src="js/ruang-admin.min.js "></script>
+
+    <script>
+        $(document).ready(function() {
+
+            // Select2 Single  with Placeholder for Company
+            $('.companySelect2').select2({
+                placeholder: "Select Company ",
+                allowClear: true
+            });
+            // Select2 Single  with Placeholder for Owner Type
+            $('.shownerTypeSelect2').select2({
+                placeholder: "Select Owner Type ",
+                allowClear: true
+            });
+            // Select2 Single  with Placeholder for SubOwner Type
+            $('.subShownerTypeSelect2').select2({
+                placeholder: "Select Sub-Owner Type ",
+                allowClear: true
+            });
+            // Select2 Single  with Placeholder for Title Type
+            $('.titleSelect2').select2({
+                placeholder: "Select Title ",
+                allowClear: true
+            });
+            // Select2 Single  with Placeholder for Nepali Title Type
+            $('.nepaliTitleSelect2').select2({
+                placeholder: "छान्नुहोस ",
+                allowClear: true
+            });
+            // Select2 Single  with Placeholder for District Code
+            $('.districtCodeSelect2').select2({
+                placeholder: "Select District Code ",
+                allowClear: true
+            });
+            // Select2 Single  with Placeholder for Occupation
+            $('.occupationSelect2').select2({
+                placeholder: "Select District Code ",
+                allowClear: true
+            });
+
+            // Bootstrap Date Picker
+            $('#simple-date1 .input-group.date').datepicker({
+                format: 'yyyy/mm/dd',
+                todayBtn: 'linked',
+                todayHighlight: true,
+                autoclose: true,
+            });
+            $('#dataTable').DataTable({
+                dom: 'Bfrtip',
+                buttons: [{
+                    extend: 'excelHtml5',
+                    title: 'Data export'
+                }]
+
+            }); // ID From dataTable 
+            $('#dataTableHover').DataTable({
+                dom: 'Bfrtip',
+                buttons: [{
+                    extend: 'excelHtml5',
+                    title: 'Data export'
+                }]
+            });
+        });
+        $('#certificateModal').on('shown.bs.modal', function(e) {
+            debugger;
+
+        });
+
+        $('#simple-date1 .input-group.date').datepicker({ 'setDate': '2021/02/25'})
+        
+    </script>
+</body>
+
+</html>

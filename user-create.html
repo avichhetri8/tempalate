@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Basic Page Info -->
+    <meta charset="utf-8">
+    <title>DeskApp - Bootstrap Admin Dashboard HTML Template</title>
+
+    <!-- Site favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="vendors/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="vendors/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="vendors/images/favicon-16x16.png">
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/ruang-admin.min.css" rel="stylesheet">
+    <!-- Select2 -->
+    <link href="vendor/select2/dist/css/select2.min.css" rel="stylesheet" type="text/css">
+    <!-- Bootstrap DatePicker -->
+    <link href="vendor/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet">
+    <!-- Page wise custom style -->
+    <style>
+        .select2 {
+            width: 100% !important;
+        }
+        
+        .select2-container--default .select2-selection--single {
+            height: 40px !important;
+            padding-top: 5px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="pd-ltr-20 xs-pd-20-10">
+            <div class="min-height-200px">
+                <div class="page-header">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12">
+                            <div class="title">
+                                <h4>System</h4>
+                            </div>
+                            <nav aria-label="breadcrumb" role="navigation">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item">Maintain User</li>
+                                    <li class="breadcrumb-item active" aria-current="page">Create User</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <!-- Default Basic Forms Start -->
+                <div class="card mb-4">
+                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                        <h6 class="m-0 font-weight-bold text-primary">Create User</h6>
+                    </div>
+
+                    <hr class="my-1">
+                    <div class="card-body">
+                        <div class="pd-20 card-box mb-30">
+                            <div class="clearfix">
+                                <div class="pull-left">
+                                    <h4 class="text-blue h4">Create User</h4>
+                                </div>
+                            </div>
+                            <form>
+                                <div class="row">
+                                    <div class="form-group row col-xl-6 col-md-12 col-sm-12 col-12">
+                                        <label class="col-sm-12 col-md-3 col-form-label">Username</label>
+                                        <div class="col-sm-12 col-md-10">
+                                            <input class="form-control" type="text" placeholder="Username">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row col-xl-6 col-md-12 col-sm-12 col-12">
+                                        <label class="col-sm-12 col-md-3 col-form-label">Password</label>
+                                        <div class="col-sm-12 col-md-10">
+                                            <input class="form-control" placeholder="*********" type="password">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+
+                                    <div class="form-group row col-xl-6 col-md-12 col-sm-12 col-12">
+                                        <label class="col-sm-12 col-md-3 col-form-label" for="userTypeSelect2">User Type</label>
+                                        <div class="col-sm-12 col-md-10">
+                                            <select class="select2-single-placeholder form-control userTypeSelect2" name="state" id="userTypeSelect2">
+                                                <option value="">Select</option>
+                                                <option value="A">Admin</option>
+                                                <option value="U">User</option>
+                                              </select>
+                                        </div>
+
+                                    </div>
+                                    <div class="form-group row col-xl-6 col-md-12 col-sm-12 col-12">
+                                        <label class="col-sm-12 col-md-3 col-form-label" for="userRoleSelect2">User Role</label>
+                                        <div class="col-sm-12 col-md-10">
+                                            <select class="select2-single-placeholder form-control userRoleSelect2" name="state" id="userRoleSelect2">
+                                                <option value="">Select</option>
+                                                <option value="C">Checker</option>
+                                                <option value="M">Maker</option>
+                                                <option value="B">Both</option>
+                                              </select>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="row">
+
+                                    <div class="form-group row col-xl-6 col-md-12 col-sm-12 col-12" id="simple-date1">
+                                        <label class="col-sm-12 col-md-3 col-form-label" for="dateValidUpto">Valid Upto</label>
+                                        <div class="input-group date col-sm-12 col-md-10">
+                                            <div class="input-group-prepend">
+
+                                            </div>
+                                            <input type="text" class="form-control" placeholder="Select a Date" id="dateValidUpto">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row col-xl-6 col-md-12 col-sm-12 col-12">
+                                        <label class="col-sm-12 col-md-3 col-form-label" for="userStatusSelect2">Status</label>
+                                        <div class="col-sm-12 col-md-10">
+                                            <select class="select2-single-placeholder form-control userStatusSelect2" name="state" id="userStatusSelect2">
+                                                <option value="">Select</option>
+                                                <option value="L">Lock</option>
+                                                <option value="U">Unlock</option>
+                                              </select>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <hr class="my-4">
+                                <div class="row col-12 p-4 justify-content-center">
+                                    <div class="col-xl-2 col-md-3 col-sm-4 col-6">
+                                        <input type="button" class="btn btn-success mr-2 mt-1 col-12" value="Add" id="button">
+                                    </div>
+                                    <div class="col-xl-2 col-md-3 col-sm-4 col-6">
+                                        <input type="button" class="btn btn-info mr-2 mt-1 col-12" value="Update">
+                                    </div>
+                                    <div class="col-xl-2 col-md-3 col-sm-4 col-6">
+                                        <input type="button" class="btn btn-danger mr-2 mt-1 col-12" value="Delete">
+                                    </div>
+                                    <div class="col-xl-2 col-md-3 col-sm-4 col-6">
+                                        <input type="button" class="btn btn-success mr-2 mt-1 col-12" value="Save">
+                                    </div>
+                                    <div class="col-xl-2 col-md-3 col-sm-4 col-6">
+                                        <input type="button" class="btn btn-secondary mr-2 mt-1 col-12" value="Cancel">
+                                    </div>
+                                    <div class="col-xl-2 col-md-3 col-sm-4 col-6">
+                                        <input type="button" class="btn btn-danger mr-2 mt-1 col-12" value="Close">
+                                    </div>
+
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Default Basic Forms End -->
+
+            </div>
+        </div>
+    </div>
+    <!-- js -->
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+
+    <!-- Select2 -->
+    <script src="vendor/select2/dist/js/select2.min.js"></script>
+    <!-- Bootstrap Datepicker -->
+    <script src="vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+    <!-- RuangAdmin Javascript -->
+    <script src="js/ruang-admin.min.js"></script>
+
+    <script>
+        $('#button').click(function(e) {
+            e.preventDefault();
+        })
+        $(document).ready(function() {
+
+            // Select2 Single  with Placeholder for User Type
+            $('.userTypeSelect2').select2({
+                placeholder: "Select User Type",
+                allowClear: true
+            });
+            // Select2 Single  with Placeholder for User Role
+            $('.userRoleSelect2').select2({
+                placeholder: "Select User Type",
+                allowClear: true
+            });
+            // Select2 Single  with Placeholder for User Status
+            $('.userStatusSelect2').select2({
+                placeholder: "Select User Status",
+                allowClear: true
+            });
+
+            // Bootstrap Date Picker
+            $('#simple-date1 .input-group.date').datepicker({
+                format: 'yyyy/mm/dd',
+                todayBtn: 'linked',
+                todayHighlight: true,
+                autoclose: true,
+            });
+        });
+    </script>
+</body>
+
+</html>
